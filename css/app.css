@@ -60,6 +60,10 @@ a {
   color: #575757;
 }
 
+#back:focus {
+  outline: none;
+}
+
 .prev-next {
   margin-top: 15px;
 }
@@ -185,6 +189,7 @@ nav a {
 .thumbnail {
     position:relative;
     overflow:hidden;
+    height: 320px;
 }
  
 .caption {
@@ -255,6 +260,9 @@ nav a {
   text-transform: uppercase;
   transition: opacity 0.6s linear 0.4s;
   z-index: -1;
+  font-family: 'lato', sans-serif;
+  font-size: 20px;
+  color: #777;
 }
 .images-loaded .loading {
   opacity: 0;
@@ -402,7 +410,7 @@ fieldset div:nth-child(3) {
 }
 
 .single-image {
-  max-height: 600px;
+  height: 600px;
 }
 
 .orange-circle {

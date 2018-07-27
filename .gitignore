@@ -1,0 +1,17 @@
+.DS_Store
+
+Caddyfile
+.shards/
+lib/
+tmpl/
+gui/
+preview/
+js/jquery-3.3.1.min.js
+
+build.py
+clean.py
+server
+server.go
+production.json
+
+todo

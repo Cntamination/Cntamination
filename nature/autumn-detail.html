@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Cantaloupe Photography 📷</title>
+	<link rel="stylesheet" href="/css/fa.css" >
+	<link rel="stylesheet" href="/css/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+  	<nav class="nav">
+	  	<a class="nav-brand" href="/">
+	<div class="orange-circle"></div>
+	Cantaloupe Photography
+</a>
+	  	<a href="/">Portraits</a>
+<a href="/nature">Nature</a>
+<a href="/about">About</a>
+<a href="/blog">Blog</a>
+<a href="/contact">Contact</a>
+    </nav>
+    <nav class="nav-mobile">
+    	<div class="links">
+	    	<a href="/">Portraits</a>
+<a href="/nature">Nature</a>
+<a href="/about">About</a>
+<a href="/blog">Blog</a>
+<a href="/contact">Contact</a>
+	  	</div>
+	  	<div class="menu-link">Menu</div>
+	  	<div class="brand-mobile">
+		  	<a class="nav-brand" href="/">
+	<div class="orange-circle"></div>
+	Cantaloupe Photography
+</a>
+	  	</div>
+    </nav>
+</div>
+	<div id="justify-content">
+		<a href="/nature" id="back">✕</a>
+		<div>
+			<img class="single-image" src="/img/nature/autumn.jpg">
+		</div>
+		<div class="prev-next">
+			<a href="/nature/tigerlily-detail">prev</a> / <a href="/nature/daylily-detail">next</a>
+		</div>
+	</div>
+	<div id="footer">
+	<a href="https://twitter.com/cantaloupephoto"><i class="fab fa-twitter"></i></a>
+	<a href="https://instagram.com/cantaloupephotography"><i class="fab fa-instagram"></i></a>
+	<a href="https://facebook.com/cantaloupephotography"><i class="fab fa-facebook-f"></i></a>
+</div>
+</div>	
+
+<script src="/js/web-animations.min.js"></script>
+<script src="/js/hammer.js"></script>
+<script src="/js/muuri.min.js"></script>
+<script src="/js/jquery-3.2.1.slim.min.js"></script>
+<script src="/js/app.js"></script>
+
+<script>document.getElementById("back").scrollIntoView()</script>
+
+<script>
+	window.addEventListener("keydown", function(ev){
+		ev.preventDefault()
+		switch(ev.key){
+			case "ArrowLeft":
+				$(".prev-next").find("a").eq(0)[0].click()
+			break
+			case "ArrowRight":
+				$(".prev-next").find("a").eq(1)[0].click()
+			break
+			case "Escape":
+				$("#back")[0].click()
+			break
+		}
+	})
+</script>
+
+</body>
+</html>
