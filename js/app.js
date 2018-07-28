@@ -64,5 +64,7 @@ function submitForm(){
 	$form.submit()
 }
 
-
+if(!$("body").hasClass("images-loaded")){
+    fadeInImages()
+}
 })
