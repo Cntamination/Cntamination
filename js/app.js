@@ -7,6 +7,7 @@ $(document).ready(function(){
 // ===============================
 // MUURI  -  Grid Library //
 // If current page has a grid, activate muuri
+
 if ($grid.length > 0) {
 	// Configure muuri
 	var grid = new Muuri('.grid', {
@@ -16,14 +17,15 @@ if ($grid.length > 0) {
 		}
 	});
 
-	// Event bindings
-	window.addEventListener('load', fadeInImages);
-	grid.on('layoutEnd', centerContent);
-
 	function fadeInImages() {
 		grid.refreshItems().layout();
 		document.body.classList.add('images-loaded');
 	}
+
+	// Event bindings
+	grid.on('layoutEnd', centerContent);
+
+	window.addEventListener('load', fadeInImages);
 
 	function centerContent(items) {
 		$grid.css("margin-left", 0)
@@ -45,6 +47,10 @@ if ($grid.length > 0) {
 	function getRight(item) {
 		return item._element.getBoundingClientRect().right
 	}
+
+	if(!$("body").hasClass("images-loaded")){
+	    fadeInImages()
+	}
 }
 
 $(".menu-link").on("click", toggleMobileMenu)
@@ -64,7 +70,14 @@ function submitForm(){
 	$form.submit()
 }
 
-if(!$("body").hasClass("images-loaded")){
-    fadeInImages()
-}
+$(".share").on("click", function(ev){
+	ev.stopPropagation()
+	$(ev.delegateTarget).parent().find(".popup").css("display", "block")
+})
+
+$("body").on("click", function(ev){
+	$(".popup").css("display", "none")
+})
+
+
 })
