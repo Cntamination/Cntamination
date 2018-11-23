@@ -459,6 +459,7 @@ fieldset div:nth-child(3) {
 
 .media-bar {
   position: relative;
+  z-index: 1000;
 }
 
 iframe {
